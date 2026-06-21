@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐竞体育 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        /* hero 简洁语句块 */
+        .hero-tag {
+            font-size: 0.875rem;
+            letter-spacing: 0.4px;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            border-left: 3px solid #c0392b;
+            padding-left: 0.85rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #4a4a4a;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e0db;
+            padding-bottom: 1.25rem;
+        }
+
+        /* 目录感卡片网格 */
+        .knowledge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .knowledge-card {
+            background: #ffffff;
+            border: 1px solid #e6e4df;
+            border-radius: 16px;
+            padding: 1.25rem 1rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .knowledge-card:hover {
+            box-shadow: 0 6px 14px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .knowledge-card .card-num {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #b0aba1;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 0.3rem;
+        }
+
+        .knowledge-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #222;
+        }
+
+        .knowledge-card p {
+            font-size: 0.9rem;
+            color: #4a4a4a;
+            line-height: 1.5;
+        }
+
+        /* 说明区 */
+        .section-block {
+            margin: 2.5rem 0;
+        }
+
+        .section-block h2 {
+            font-size: 1.4rem;
+            font-weight: 540;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+            color: #161616;
+        }
+
+        .section-block p {
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .section-block p a {
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(192, 57, 43, 0.25);
+            transition: border-color 0.15s;
+        }
+
+        .section-block p a:hover {
+            border-bottom-color: #c0392b;
+        }
+
+        /* 提示区 — 弱背景卡片 */
+        .note-box {
+            background: #f2f0ec;
+            border-radius: 20px;
+            padding: 1.5rem 1.75rem;
+            margin: 2.2rem 0;
+        }
+
+        .note-box .note-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7f7a72;
+            margin-bottom: 0.4rem;
+        }
+
+        .note-box p {
+            font-size: 0.95rem;
+            color: #2b2b2b;
+            margin-bottom: 0.4rem;
+        }
+
+        .note-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 相关信息区 – FAQ 风格摘要 */
+        .faq-mini {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e0db;
+            padding: 1rem 0;
+        }
+
+        .faq-item:first-of-type {
+            border-top: 1px solid #e2e0db;
+        }
+
+        .faq-q {
+            font-weight: 550;
+            font-size: 0.95rem;
+            color: #1c1c1c;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #4f4f4f;
+            line-height: 1.6;
+        }
+
+        .divider-light {
+            height: 1px;
+            background: #e2e0db;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: #8a857e;
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 0.5rem;
+        }
+
+        @media (max-width: 540px) {
+            body { padding: 1.4rem 0.75rem; }
+            h1 { font-size: 1.8rem; }
+            .knowledge-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+            .note-box { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- hero 简要标识 -->
+        <div class="hero-tag">平台知识库 · 快速识别</div>
+        <h1>乐竞体育</h1>
+        <div class="subhead">
+            用户希望第一时间判断一个体育信息平台的用途与边界。本页以知识组织方式，勾勒 <strong>乐竞体育</strong> 的核心属性、适用场景与常见疑问。
+        </div>
+
+        <!-- 目录感卡片区：四个侧面的知识入口 -->
+        <div class="knowledge-grid">
+            <div class="knowledge-card">
+                <span class="card-num">01</span>
+                <h3>平台定位</h3>
+                <p>综合体育资讯与赛事数据聚合入口，覆盖主流联赛及实时动态。</p>
+            </div>
+            <div class="knowledge-card">
+                <span class="card-num">02</span>
+                <h3>内容构成</h3>
+                <p>比分、赛程、球队统计、新闻摘要；信息结构偏向直观检索。</p>
+            </div>
+            <div class="knowledge-card">
+                <span class="card-num">03</span>
+                <h3>常用路径</h3>
+                <p>通过分类导航或搜索可快速定位特定比赛、联赛或队伍。</p>
+            </div>
+            <div class="knowledge-card">
+                <span class="card-num">04</span>
+                <h3>界面特点</h3>
+                <p>卡片式数据面板，适合在移动端与桌面端快速浏览。</p>
+            </div>
+        </div>
+
+        <!-- 说明区：从用户角度展开 -->
+        <div class="section-block">
+            <h2>为何需要识别平台用途</h2>
+            <p>
+                面对名称各异的体育站点，用户常耗费时间判断其实际提供的信息类型。<a href="https://h5-lejingsport.com">乐竞体育</a> 
+                以赛事数据与实时资讯作为主干内容，不涉及社区论坛或视频直播，因此更适合需要快速获取比分、赛程摘要的访问者。
+            </p>
+            <p>
+                从界面布局来看，其信息层级围绕「联赛 — 比赛 — 数据」展开，用户可在两到三次点击内抵达目标比赛详情页。这种结构对日常查看赛果的用户尤其友好。
+            </p>
+        </div>
+
+        <!-- 提示区: 使用场景提醒 -->
+        <div class="note-box">
+            <div class="note-label">使用提示</div>
+            <p>▪ 如果只需要某场赛事的即时比分及阵容数据，直接使用顶部联赛筛选器。</p>
+            <p>▪ 页面默认展示当天重点赛事，历史数据可通过日期控件调取。</p>
+            <p>▪ 部分深度统计（如球员跑动距离）需在单场比赛页面内展开查看。</p>
+        </div>
+
+        <!-- 相关信息区：FAQ摘要形式 -->
+        <div class="faq-mini">
+            <h2 style="font-size: 1.2rem; font-weight: 540; margin-bottom: 0.2rem;">常见疑问摘要</h2>
+            <p style="font-size: 0.85rem; color: #6b665e; margin-bottom: 1rem;">根据用户询问频率整理</p>
+
+            <div class="faq-item">
+                <div class="faq-q">Q：该平台是否提供赛前分析文章？</div>
+                <div class="faq-a">A：不提供长篇分析。信息以结构化数据为主，如交锋记录、近期战绩等，用户可自行对比。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：移动端访问体验如何？</div>
+                <div class="faq-a">A：采用响应式布局，核心功能（比分、赛程）在手机上可单手操作，数据卡片自动适配屏幕宽度。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：是否需要注册才能查看？</div>
+                <div class="faq-a">A：公开的赛事数据无需登录即可浏览；部分个性化功能（如收藏球队）可能需要简易账户。</div>
+            </div>
+        </div>
+
+        <div class="divider-light"></div>
+
+        <div class="footer-note">
+            本页为知识索引，内容基于平台公开结构描述 · 信息仅供参考
+        </div>
+    </div>
+</body>
+</html>
